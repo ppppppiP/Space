@@ -308,7 +308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf5a5e73ba956244965e308e2468ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 100
 --- !u!1 &3188969936411440759
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +743,6 @@ MonoBehaviour:
   - {fileID: 3448132553385401469}
   - {fileID: 785360909300932710}
   - {fileID: 6207117551797988621}
-  - {fileID: 0}
   _item: {fileID: 7295343929506774048, guid: fb3f95f789eef1445bdccbb747b05b79, type: 3}
   _randomPercent: 52.6
 --- !u!1 &8214135425932008913
