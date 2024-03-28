@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        Vector3 direction = Vector3.right * Input.GetAxisRaw("Horizontal");
+        Vector3 direction = Vector3.right * Input.GetAxis("Horizontal");
         _controller.Move(direction * _speed * Time.deltaTime);
     }
 
