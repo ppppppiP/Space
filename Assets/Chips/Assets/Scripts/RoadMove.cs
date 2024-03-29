@@ -2,7 +2,7 @@
 
 public class RoadMove: MonoBehaviour
 {
-    [SerializeField] float _speed;
+    
 
     private void FixedUpdate()
     {
@@ -11,7 +11,7 @@ public class RoadMove: MonoBehaviour
 
     private void Move()
     {
-        transform.Translate(-transform.forward * _speed * Time.deltaTime);
+        transform.Translate(-transform.forward * RoadSpeed.Instance.Speed * Time.deltaTime);
     }
 
     private void OnBecameInvisible()

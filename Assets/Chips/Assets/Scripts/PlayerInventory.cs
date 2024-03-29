@@ -2,9 +2,13 @@
 
 public class PlayerInventory: MonoBehaviour
 {
-    int _mony;
+    public int _mony { get; private set; }
 
-
+    public static PlayerInventory Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
     public void TakeMony(int mony)
     {
         if (mony < 0)

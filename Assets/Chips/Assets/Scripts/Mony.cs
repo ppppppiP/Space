@@ -1,14 +1,66 @@
-﻿using UnityEngine;
+﻿
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Mony: MonoBehaviour
+using DG.Tweening;
+using Zenject;
+
+public class Mony : MonoBehaviour
 {
-    [SerializeField, Min(0)] int _price;
+    Tween _tween;
+    Tween _scaleTween;
+    [SerializeField] float _jumpPower;
+    [SerializeField] int _jumpsNumber;
+    [SerializeField] float _duration;
+    [SerializeField] float _durationScale;
+    [SerializeField] Ease _easy;
+     
 
-    private void OnTriggerEnter(Collider other)
+    PlayerInventory _pla;
+
+    bool enter;
+
+    System.Action a;
+
+    private void OnEnable()
     {
-        if(other.TryGetComponent<PlayerInventory>(out PlayerInventory pla))
+        a += AddVideocard;
+    }
+
+    private void Update()
+    { 
+        if (enter == true)
         {
-            pla.TakeMony(_price);
+
+            _tween = transform.DOJump(_pla.transform.position, _jumpPower, _jumpsNumber, _duration).SetEase(_easy).OnComplete(a.Invoke);
+            //_scaleTween = transform.DOScale(0.1f, _durationScale).OnComplete(() => _pla = null);
+
         }
+    }
+
+    private void OnDisable()
+    {
+        PlayerInventory.Instance.TakeMony(MonyPrice.Instance.Price);
+    }
+
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<PlayerInventory>(out PlayerInventory pla))
+        {_pla = pla;
+            enter = true;
+            Debug.Log(MonyPrice.Instance.Price);
+            
+        }
+    }
+
+    public void AddVideocard()
+    {
+        
+        MonyImpact.instance.ViweTakeMony(_pla._mony);
+        gameObject.SetActive(false);
+        
     }
 }
