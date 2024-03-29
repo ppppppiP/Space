@@ -40,12 +40,11 @@ public class Equipment: MonoBehaviour
     IEquipment equip;
     [SerializeField] EquipmentType _equipmentType;
     [SerializeField] float _timer;
-    [SerializeField] GameObject TiresObject;
-    [SerializeField] GameObject WingsObject;
-    [SerializeField] GameObject BoolBarObject;
+
     float _time;
     bool _isEnter;
     PlayerInventory _inventory;
+    EquipmentObjects _objects;
 
     private void Start()
     {
@@ -74,26 +73,28 @@ public class Equipment: MonoBehaviour
             }
             else
             {
+
                 _isActive = true;
                 _isEnter = false;
-
-                TiresObject.SetActive(false);
-                WingsObject.SetActive(false);
-                BoolBarObject.SetActive(false);
+                
+                _objects.TiresObject.SetActive(!_isActive);
+                _objects.WingsObject.SetActive(!_isActive);
+                _objects.BoolBarObject.SetActive(!_isActive);
+                Debug.LogAssertion("sdfgsdf");
             } 
             switch (equip)
             {
             case Tires:
                 equip.SetEquipment(_isActive, _inventory);
-                    TiresObject.SetActive(true);
+                    _objects.TiresObject.SetActive(!_isActive);
                 break;
             case Wings:
                 equip.SetEquipment(_isActive, _inventory);
-                    WingsObject.SetActive(true);
+                    _objects.WingsObject.SetActive(!_isActive);
                 break;
             case BoolBar:
                 equip.SetEquipment(_isActive, _inventory);
-                    BoolBarObject.SetActive(true);
+                    _objects.BoolBarObject.SetActive(!_isActive);
                 break;
             }
         }
@@ -104,6 +105,7 @@ public class Equipment: MonoBehaviour
         
         if (other.TryGetComponent<PlayerInventory>(out PlayerInventory inventory))
         {
+            _objects = other.GetComponent<EquipmentObjects>();
             _isEnter = true;
             _isActive = false;
             _inventory = inventory;
