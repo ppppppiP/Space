@@ -41,7 +41,7 @@ public class Mony : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerInventory.Instance.TakeMony(MonyPrice.Instance.Price);
+        PlayerInventory.Instance.TakeMoney(MonyPrice.Instance.Price);
     }
 
 

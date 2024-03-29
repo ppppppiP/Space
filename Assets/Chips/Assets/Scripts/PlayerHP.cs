@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour
 {
     [SerializeField] int _playerHP;
+    [SerializeField] TextMeshProUGUI _playerHPText;
+
+    private void Start()
+    {
+        _playerHPText.text = _playerHP.ToString();
+    }
 
     public void TakeDamage(int damage)
     {
@@ -18,6 +25,7 @@ public class PlayerHP : MonoBehaviour
             return;
         }
         _playerHP -= damage;
+        _playerHPText.text = _playerHP.ToString();
         if(_playerHP <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
