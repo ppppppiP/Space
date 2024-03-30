@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 90052920250284885}
   - component: {fileID: 2641359177223152480}
   - component: {fileID: 3601693780029306206}
+  - component: {fileID: -6476302394483063974}
   m_Layer: 0
   m_Name: Obtacle
   m_TagString: Untagged
@@ -120,3 +121,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleTipe: 1
   _damage: 1
+--- !u!114 &-6476302394483063974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012890546097625086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2ed7a0bb0a85149aab2f5a4fc8e6b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jumpPower: 2
+  _jumpsNumber: 2
+  _duration: 0.5
+  _durationScale: 0
+  _easy: 0
