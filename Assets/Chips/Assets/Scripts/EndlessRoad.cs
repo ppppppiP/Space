@@ -41,15 +41,16 @@ public class EndlessRoad : MonoBehaviour
 
     public void Spawn() {
         Vector3 position;
+        position = transform.position;
         _roadNext = _roads[Random.Range(0, _roads.Count - 1)];
 
         if(_roadNext.transform.localScale.z <= _road.transform.localScale.z)
         {
-            position = new Vector3(0, 0, _road.transform.position.z + _road.transform.localScale.z);
+            position.z = _road.transform.position.z + _road.transform.localScale.z;
         }
         else
         {
-            position = new Vector3(0, 0, _road.transform.position.z + _roadNext.transform.localScale.z - _road.transform.localScale.z);
+            position.z =  _road.transform.position.z + _roadNext.transform.localScale.z - _road.transform.localScale.z;
         }
         
         _road = Instantiate(_roadNext, position, Quaternion.identity);
