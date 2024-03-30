@@ -33,7 +33,7 @@ public class Mony : MonoBehaviour
         if (enter == true)
         {
 
-            _tween = transform.DOJump(_pla.transform.position, _jumpPower, _jumpsNumber, _duration).SetEase(_easy).OnComplete(a.Invoke);
+            
             //_scaleTween = transform.DOScale(0.1f, _durationScale).OnComplete(() => _pla = null);
 
         }
@@ -52,7 +52,8 @@ public class Mony : MonoBehaviour
         {_pla = pla;
             enter = true;
             Debug.Log(MonyPrice.Instance.Price);
-            
+            _tween = transform.DOJump(_pla.transform.position, _jumpPower, _jumpsNumber, _duration).SetEase(_easy).OnComplete(a.Invoke);
+
         }
     }
 
