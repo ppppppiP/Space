@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using Lean.Pool;
 public class RoadMove: MonoBehaviour
 {
     [SerializeField] float Timer = 30f;
@@ -16,6 +16,7 @@ public class RoadMove: MonoBehaviour
         if (_time >= Timer)
         {
             Destroy(gameObject);
+            LeanPool.Despawn(EndlessRoad.instance._road);
         }
     }
 

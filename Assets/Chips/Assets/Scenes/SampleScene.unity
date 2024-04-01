@@ -2616,6 +2616,7 @@ MonoBehaviour:
   _roads:
   - {fileID: 3001523389138160577, guid: 8ab7787affbc9a34ebe59d0da295b10f, type: 3}
   _roadLenth: 0
+  _road: {fileID: 0}
 --- !u!4 &1305749274
 Transform:
   m_ObjectHideFlags: 0
@@ -7666,7 +7667,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541518072}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa34f5fce900f69408c5ada0cb60af55, type: 3}
   m_Name: 
@@ -7674,6 +7675,7 @@ MonoBehaviour:
   _roads:
   - {fileID: 3001523389138160577, guid: 8ab7787affbc9a34ebe59d0da295b10f, type: 3}
   _roadLenth: 0
+  _road: {fileID: 0}
 --- !u!4 &1541518074
 Transform:
   m_ObjectHideFlags: 0
