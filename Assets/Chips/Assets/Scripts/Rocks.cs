@@ -12,7 +12,7 @@ public class Rocks: MonoBehaviour
     [SerializeField] float _durationScale;
     [SerializeField] Ease _easy;
 
-
+    
     PlayerInventory _pla;
 
     bool enter;

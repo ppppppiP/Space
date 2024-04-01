@@ -3,9 +3,9 @@
 public class PlayerInventory: MonoBehaviour
 {
     public int _mony { get; private set; }
-    public bool Tires;
-    public bool Wings;
-    public bool BoolBar;
+    [HideInInspector] public bool Tires;
+    [HideInInspector] public bool Wings;
+    [HideInInspector] public bool BoolBar;
 
     public static PlayerInventory Instance;
     private void Awake()
