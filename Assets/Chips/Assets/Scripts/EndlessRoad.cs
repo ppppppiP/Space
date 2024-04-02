@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Lean.Pool;
 
 public class EndlessRoad : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _roads; [SerializeField] private float _roadLenth = 40;
-    private GameObject _road;
+    public GameObject _road;
     private GameObject _roadNext;
     private Vector3 _roadPosition;
 
+    public static EndlessRoad instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         _roadNext = _roads[Random.Range(0, _roads.Count - 1)];
@@ -53,6 +59,6 @@ public class EndlessRoad : MonoBehaviour
             position.z =  _road.transform.position.z + _roadNext.transform.localScale.z - _road.transform.localScale.z;
         }
         
-        _road = Instantiate(_roadNext, position, Quaternion.identity);
+        _road = LeanPool.Spawn(_roadNext, position, Quaternion.identity);
     } 
 }
