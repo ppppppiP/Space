@@ -44,7 +44,7 @@ public class Equipment: MonoBehaviour
     float _time;
     bool _isEnter;
     PlayerInventory _inventory;
-    EquipmentObjects _objects;
+    
 
     private void Start()
     {
@@ -66,38 +66,44 @@ public class Equipment: MonoBehaviour
     {
         if (_isEnter)
         {
-            _time += Time.deltaTime;
-            if(_time <= _timer)
-            {
-                _isActive = false;
-            }
-            else
-            {
+            //_time += Time.deltaTime;
+            //if(_time <= _timer)
+            //{
+            //    _isActive = false;
+            //}
+            //else
+            //{
 
-                _isActive = true;
-                _isEnter = false;
-                
-                _objects.TiresObject.SetActive(!_isActive);
-                _objects.WingsObject.SetActive(!_isActive);
-                _objects.BoolBarObject.SetActive(!_isActive);
-                Debug.LogAssertion("sdfgsdf");
-            } 
+            //    _isActive = true;
+            //    _isEnter = false;
+
+            //    _objects.TiresObject.SetActive(!_isActive);
+            //    _objects.WingsObject.SetActive(!_isActive);
+            //    _objects.BoolBarObject.SetActive(!_isActive);
+            //    Debug.LogAssertion("sdfgsdf");
+            //} 
+            
             switch (equip)
             {
             case Tires:
                 equip.SetEquipment(_isActive, _inventory);
-                    _objects.TiresObject.SetActive(!_isActive);
+                    
                 break;
             case Wings:
                 equip.SetEquipment(_isActive, _inventory);
-                    _objects.WingsObject.SetActive(!_isActive);
+                    
                 break;
             case BoolBar:
                 equip.SetEquipment(_isActive, _inventory);
-                    _objects.BoolBarObject.SetActive(!_isActive);
+                    
                 break;
             }
         }
+    }
+    private void OnDisable()
+    {
+        _isActive = true;
+        _isEnter = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -105,7 +111,7 @@ public class Equipment: MonoBehaviour
         
         if (other.TryGetComponent<PlayerInventory>(out PlayerInventory inventory))
         {
-            _objects = other.GetComponent<EquipmentObjects>();
+           
             _isEnter = true;
             _isActive = false;
             _inventory = inventory;

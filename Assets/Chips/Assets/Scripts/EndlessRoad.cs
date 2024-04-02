@@ -10,7 +10,7 @@ public class EndlessRoad : MonoBehaviour
     private GameObject _roadNext;
     private Vector3 _roadPosition;
 
-    public static EndlessRoad instance;
+    public static EndlessRoad instance { get; set; }
     private void Awake()
     {
         instance = this;
@@ -18,7 +18,7 @@ public class EndlessRoad : MonoBehaviour
     private void Start()
     {
         _roadNext = _roads[Random.Range(0, _roads.Count - 1)];
-        _road = Instantiate(_roadNext, transform.position, Quaternion.identity);
+        _road = LeanPool.Spawn(_roadNext, transform.position, Quaternion.identity);
         _roadLenth = _road.transform.localScale.z;
         //_road = Instantiate(_roads[Random.Range(0, _roads.Count - 1)],
         //    new Vector3(0, 0, _roads[0].transform.localScale.z ), Quaternion.identity);

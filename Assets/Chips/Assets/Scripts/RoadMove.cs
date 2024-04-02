@@ -10,20 +10,19 @@ public class RoadMove: MonoBehaviour
         Move();
     }
 
-    private void Update()
-    {
-        _time+= Time.deltaTime;
-        if (_time >= Timer)
-        {
-            Destroy(gameObject);
-            LeanPool.Despawn(EndlessRoad.instance._road);
-        }
-    }
+   
 
     private void Move()
     {
         transform.Translate(-transform.forward * RoadSpeed.Instance.Speed * Time.deltaTime);
     }
 
-   
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<RoadDespawner>())
+        {
+            LeanPool.Despawn(gameObject);
+        }
+    }
+
 }
