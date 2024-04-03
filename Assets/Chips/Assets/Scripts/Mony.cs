@@ -27,7 +27,7 @@ public class Mony : MonoBehaviour
 
     private void Start()
     {
-        pos = gameObject.transform.position;
+        pos.y = gameObject.transform.position.y;
     }
     private void OnEnable()
     {
