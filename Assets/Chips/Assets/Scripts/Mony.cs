@@ -16,7 +16,8 @@ public class Mony : MonoBehaviour
     [SerializeField] float _duration;
     
     [SerializeField] Ease _easy;
-     
+
+    Vector3 pos;
 
     PlayerInventory _pla;
 
@@ -24,9 +25,14 @@ public class Mony : MonoBehaviour
 
     System.Action a;
 
+    private void Start()
+    {
+        pos = gameObject.transform.position;
+    }
     private void OnEnable()
     {
         a += AddVideocard;
+        gameObject.transform.position = pos;
     }
 
     //private void Update()
@@ -54,14 +60,14 @@ public class Mony : MonoBehaviour
             enter = true;
             Debug.Log(MonyPrice.Instance.Price);
             _tween = transform.DOMoveY(_jumpPower ,_duration).SetEase(_easy).OnComplete(a.Invoke);
-  PlayerInventory.Instance.TakeMoney(MonyPrice.Instance.Price);
+  PlayerInventory.Instance.TakeMoney(MonyPrice.Instance.Price);MonyImpact.instance.ViweTakeMony(_pla._mony);
         }
     }
 
     public void AddVideocard()
     {
         
-        MonyImpact.instance.ViweTakeMony(_pla._mony);
+        
         LeanPool.Despawn(gameObject);
         
     }
