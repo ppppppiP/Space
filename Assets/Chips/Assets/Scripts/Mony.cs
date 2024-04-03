@@ -32,7 +32,7 @@ public class Mony : MonoBehaviour
     private void OnEnable()
     {
         a += AddVideocard;
-        gameObject.transform.position = pos;
+        gameObject.transform.up = pos;
     }
 
     //private void Update()
