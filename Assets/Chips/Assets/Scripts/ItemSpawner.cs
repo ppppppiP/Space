@@ -4,7 +4,7 @@ using Lean.Pool;
 
 public class ItemSpawner: MonoBehaviour
 {
-    [SerializeField] List<Transform> _pointsToSpawn;
+    [SerializeField] Transform[] _pointsToSpawn;
     [SerializeField] GameObject _item;
 
     [SerializeField, Range(0, 100f), Tooltip("Сюда записывается шанс выпадения айтемов. 20 - 20%, 68 - 68% к примеру")]
@@ -20,7 +20,6 @@ public class ItemSpawner: MonoBehaviour
         {
             if(point == null)
             {
-                _pointsToSpawn.Remove(point);
                 Debug.LogAssertion("PLZ, DELETE NULL POINT IN SPAWNER)))");
             }
         }
