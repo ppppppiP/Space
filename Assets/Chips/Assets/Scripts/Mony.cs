@@ -5,6 +5,7 @@ using UnityEngine;
 
 using DG.Tweening;
 using Zenject;
+using Lean.Pool;
 
 public class Mony : MonoBehaviour
 {
@@ -61,7 +62,7 @@ public class Mony : MonoBehaviour
     {
         
         MonyImpact.instance.ViweTakeMony(_pla._mony);
-        gameObject.SetActive(false);
+        LeanPool.Despawn(gameObject);
         
     }
 }
