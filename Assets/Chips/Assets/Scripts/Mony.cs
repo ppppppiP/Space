@@ -28,20 +28,20 @@ public class Mony : MonoBehaviour
         a += AddVideocard;
     }
 
-    private void Update()
-    { 
-        if (enter == true)
-        {
+    //private void Update()
+    //{ 
+    //    if (enter == true)
+    //    {
 
 
-            //_scaleTween = transform.DOScale(0.1f, _durationScale).OnComplete(() => _pla = null);
-            _tween = transform.DOJump(_pla.transform.position, _jumpPower, _jumpsNumber, _duration).SetEase(_easy).OnComplete(a.Invoke);
-        }
-    }
+    //        //_scaleTween = transform.DOScale(0.1f, _durationScale).OnComplete(() => _pla = null);
+            
+    //    }
+    //}
 
     private void OnDisable()
     {
-        PlayerInventory.Instance.TakeMoney(MonyPrice.Instance.Price);
+      
     }
 
 
@@ -52,8 +52,8 @@ public class Mony : MonoBehaviour
         {_pla = pla;
             enter = true;
             Debug.Log(MonyPrice.Instance.Price);
-            
-
+            _tween = transform.DOMoveY(10f ,_duration).SetEase(_easy).OnComplete(a.Invoke);
+  PlayerInventory.Instance.TakeMoney(MonyPrice.Instance.Price);
         }
     }
 
