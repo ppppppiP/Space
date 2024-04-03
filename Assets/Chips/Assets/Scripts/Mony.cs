@@ -11,9 +11,9 @@ public class Mony : MonoBehaviour
     Tween _tween;
     Tween _scaleTween;
     [SerializeField] float _jumpPower;
-    [SerializeField] int _jumpsNumber;
+    ;
     [SerializeField] float _duration;
-    [SerializeField] float _durationScale;
+    
     [SerializeField] Ease _easy;
      
 
@@ -52,7 +52,7 @@ public class Mony : MonoBehaviour
         {_pla = pla;
             enter = true;
             Debug.Log(MonyPrice.Instance.Price);
-            _tween = transform.DOMoveY(10f ,_duration).SetEase(_easy).OnComplete(a.Invoke);
+            _tween = transform.DOMoveY(_jumpPower ,_duration).SetEase(_easy).OnComplete(a.Invoke);
   PlayerInventory.Instance.TakeMoney(MonyPrice.Instance.Price);
         }
     }
