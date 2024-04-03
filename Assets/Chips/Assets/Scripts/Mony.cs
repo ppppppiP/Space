@@ -11,7 +11,7 @@ public class Mony : MonoBehaviour
     Tween _tween;
     Tween _scaleTween;
     [SerializeField] float _jumpPower;
-    ;
+    
     [SerializeField] float _duration;
     
     [SerializeField] Ease _easy;
