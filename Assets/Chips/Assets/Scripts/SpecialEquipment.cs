@@ -85,22 +85,21 @@ namespace Assets.Chips.Assets.Scripts
         {
             if (_isEnter)
             {
-                _time += Time.deltaTime;
-                if (_time <= _timer)
-                {
-                    _isActive = false;
-                }
-                else
-                {
+                //_time += Time.deltaTime;
+                //if (_time <= _timer)
+                //{
+                //    _isActive = false;
+                //}
+                //else
+                //{
 
-                    _isActive = true;
-                    _isEnter = false;
+                //    
 
-                    _objects.TiresObject.SetActive(!_isActive);
-                    _objects.WingsObject.SetActive(!_isActive);
-                    _objects.BoolBarObject.SetActive(!_isActive);
-                    Debug.LogAssertion("sdfgsdf");
-                }
+                //    _objects.TiresObject.SetActive(!_isActive);
+                //    _objects.WingsObject.SetActive(!_isActive);
+                //    _objects.BoolBarObject.SetActive(!_isActive);
+                    
+                //}
                 switch (equip)
                 {
                     case Tires:
@@ -117,6 +116,12 @@ namespace Assets.Chips.Assets.Scripts
                         break;
                 }
             }
+        }
+
+        private void OnDisable()
+        {
+            _isActive = true;
+            _isEnter = false;
         }
 
         private void OnTriggerEnter(Collider other)
