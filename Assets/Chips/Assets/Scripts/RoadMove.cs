@@ -5,7 +5,7 @@ public class RoadMove: MonoBehaviour
     [SerializeField] float Timer = 30f;
     float _time;
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         Move();
     }

@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour
 {
     CharacterController _controller;
     [SerializeField] float _speed;
+    [SerializeField] float _maxSpeed;
+    [SerializeField] float _speedUp;
     
     float _horizontal;
 
@@ -22,6 +24,8 @@ public class PlayerMove : MonoBehaviour
         
         Vector3 direction = Vector3.right * SimpleInput.GetAxis("Horizontal");
        _controller.Move(direction * _speed * Time.deltaTime);
+        if (_speed < _maxSpeed)
+            _speed += _speedUp * Time.deltaTime;
     }
 
   

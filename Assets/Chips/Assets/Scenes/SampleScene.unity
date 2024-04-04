@@ -417,8 +417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 100
-  _speedUp: 1
-  _maxSpeed: 500
+  _speedUp: 5
+  _maxSpeed: 300
 --- !u!4 &188997286
 Transform:
   m_ObjectHideFlags: 0
@@ -7710,7 +7710,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
