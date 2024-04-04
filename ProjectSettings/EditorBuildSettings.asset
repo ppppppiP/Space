@@ -6,6 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+    path: Assets/DarkSoup/DS Test Scene.unity
+    guid: 18284f8f1333e344ea8228f4fe636bda
+  - enabled: 1
+    path: Assets/Aleksey/Assets/Scenes/SceneAleksey.unity
+    guid: 9385f00eabdfe6d4f91ce265cc85d71a
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5db8c612f832f074b831e61031c05fa7,
+      type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: 3ec3b08289552224d963abed932beffe, type: 2}
