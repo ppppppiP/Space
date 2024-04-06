@@ -10,9 +10,12 @@ public class PortalTeleporter: MonoBehaviour
     [SerializeField] float _timer;
     Vector3 defoultPos;
 
+    public static PortalTeleporter Instance;
+
     private void Awake()
     {
         defoultPos = _playerPosition.transform.position;
+        Instance = this;
     }
 
     private void OnEnable()
@@ -25,7 +28,7 @@ public class PortalTeleporter: MonoBehaviour
     //    _observ.OnPortalEnter -= Teleport;
     //}
 
-    private void Teleport(Transform player)
+    public void Teleport(Transform player)
     {
         Debug.Log("tpp");
         Debug.Log(_playerPosition.transform.position);
