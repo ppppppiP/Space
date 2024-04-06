@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using Zenject;
 
 namespace Assets.Chips.Assets.Scripts
 {
@@ -15,6 +17,9 @@ namespace Assets.Chips.Assets.Scripts
         Portal,
         Turbibe
     }
+
+    
+
     public interface IEquipment
     {
         public void SetEquipment(bool a, PlayerInventory pla);
@@ -24,6 +29,7 @@ namespace Assets.Chips.Assets.Scripts
         public void SetEquipment(bool a, PlayerInventory pla)
         {
             pla.Magnit = a;
+           
         }
     }
 
@@ -50,13 +56,13 @@ namespace Assets.Chips.Assets.Scripts
         }
     }
 
-    public class Equipment : MonoBehaviour
+    public class SpecialEquipment : MonoBehaviour
     {
         bool _isActive = true;
         IEquipment equip;
         [SerializeField] EquipmentType _equipmentType;
         [SerializeField] float _timer;
-
+        [Inject] SpecialEquipmentObserver _observ;
         float _time;
         bool _isEnter;
         PlayerInventory _inventory;
@@ -118,6 +124,8 @@ namespace Assets.Chips.Assets.Scripts
             }
         }
 
+        
+
         private void OnDisable()
         {
             _isActive = true;
@@ -133,6 +141,16 @@ namespace Assets.Chips.Assets.Scripts
                 _isEnter = true;
                 _isActive = false;
                 _inventory = inventory;
+                
+
+                if(equip is Portal)
+                {
+                    _observ.OnPortalEnter?.Invoke(other.transform);
+                }else
+                if(equip is Turbine)
+                {
+                    _observ.OnRocketEnter?.Invoke();
+                }
             }
 
         }
