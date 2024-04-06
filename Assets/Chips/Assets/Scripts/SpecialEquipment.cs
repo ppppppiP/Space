@@ -61,9 +61,9 @@ namespace Assets.Chips.Assets.Scripts
         bool _isActive = true;
         IEquipment equip;
         [SerializeField] EquipmentType _equipmentType;
-        [SerializeField] float _timer;
+        
         [Inject] SpecialEquipmentObserver _observ;
-        float _time;
+        
         bool _isEnter;
         PlayerInventory _inventory;
         EquipmentObjects _objects;
@@ -145,11 +145,11 @@ namespace Assets.Chips.Assets.Scripts
 
                 if(equip is Portal)
                 {
-                    _observ.OnPortalEnter?.Invoke(other.transform);
+                    SpecialEquipmentObserver.OnPortalEnter?.Invoke(other.transform);
                 }else
                 if(equip is Turbine)
                 {
-                    _observ.OnRocketEnter?.Invoke();
+                    SpecialEquipmentObserver.OnRocketEnter?.Invoke();
                 }
             }
 
