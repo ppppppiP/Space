@@ -145,11 +145,11 @@ namespace Assets.Chips.Assets.Scripts
 
                 if(equip is Portal)
                 {
-                    SpecialEquipmentObserver.OnPortalEnter?.Invoke(other.transform);
+                    PortalTeleporter.Instance.Teleport(other.transform);
                 }else
                 if(equip is Turbine)
                 {
-                    SpecialEquipmentObserver.OnRocketEnter?.Invoke();
+                    Rocket.Instance.RocketJump();
                 }
             }
 

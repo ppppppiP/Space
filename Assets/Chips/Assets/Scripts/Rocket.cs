@@ -15,11 +15,13 @@ public class Rocket: MonoBehaviour
     Tween _tween2;
     bool _isUp;
 
+    public static Rocket Instance;
+
     private void Awake()
     {
         _groundPosition = _playerTransform.position;
         Debug.Log(_groundPosition.y);
-        
+        Instance = this;
 
     }
 
