@@ -4,7 +4,8 @@ enum ObstacleTipe
 {
     Dirt,
     Ravine,
-    Rock
+    Rock,
+    ImpassableObstacle
 }
 public interface IObstacle
 {
@@ -25,6 +26,17 @@ public class Dirt : IObstacle
 }
 
 public class Ravine: IObstacle
+{
+    
+    public void SetDamage(bool canTake, PlayerHP hP, int damage)
+    {
+        if (canTake)
+        {
+            hP.TakeDamage(damage);
+        }
+    }
+}
+public class ImpassableObstacle : IObstacle
 {
     
     public void SetDamage(bool canTake, PlayerHP hP, int damage)
@@ -66,6 +78,9 @@ public class Obstacle: MonoBehaviour
                 break;
             case ObstacleTipe.Rock:
                 obstacle = new Rock();
+                break; 
+            case ObstacleTipe.ImpassableObstacle:
+                obstacle = new ImpassableObstacle();
                 break;
         }
     }
@@ -85,6 +100,9 @@ public class Obstacle: MonoBehaviour
                     break;
                 case Rock:
                     obstacle.SetDamage(inventory.BoolBar, hp, _damage);
+                    break;
+                case ImpassableObstacle:
+                    obstacle.SetDamage(inventory.Train, hp, _damage);
                     break;
             }
             

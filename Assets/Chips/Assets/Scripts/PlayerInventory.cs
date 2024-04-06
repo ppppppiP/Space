@@ -1,15 +1,16 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 public class PlayerInventory: MonoBehaviour
 {
     public int _mony { get; private set; }
-     public bool Tires = true;
-     public bool Wings = true;
-     public bool BoolBar = true, 
-        Magnit,
-        Train,
-        Portal,
-        Turbibe;
+    public bool Tires = true;
+    public bool Wings = true;
+    public bool BoolBar = true, 
+                Magnit,
+                Train,
+                Portal,
+                Turbibe;
     [SerializeField] float _time = 10f;
     float _timer;
     EquipmentObjects _objects;
@@ -53,7 +54,8 @@ public class PlayerInventory: MonoBehaviour
     {
         if(Tires == true)
         {
-
+            
         }
     }
 }
+

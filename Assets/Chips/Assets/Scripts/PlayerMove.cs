@@ -23,7 +23,10 @@ public class PlayerMove : MonoBehaviour
     {
         
         Vector3 direction = Vector3.right * SimpleInput.GetAxis("Horizontal");
-       _controller.Move(direction * _speed * Time.deltaTime);
+
+        if(direction != Vector3.zero)
+            _controller.Move(direction * _speed * Time.deltaTime);
+
         if (_speed < _maxSpeed)
             _speed += _speedUp * Time.deltaTime;
     }
