@@ -2,7 +2,7 @@
 
 public class SpecialEquipmentObserver
 {
-    public System.Action<Transform> OnPortalEnter;
-    public System.Action OnRocketEnter;
+    public static System.Action<Transform> OnPortalEnter { get; set; }
+    public static System.Action OnRocketEnter { get; set; }
     
 }

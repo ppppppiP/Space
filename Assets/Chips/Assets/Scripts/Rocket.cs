@@ -25,12 +25,12 @@ public class Rocket: MonoBehaviour
 
     private void OnEnable()
     {
-        _observ.OnRocketEnter += RocketJump;
+        SpecialEquipmentObserver.OnRocketEnter += RocketJump;
     }
-    private void OnDisable()
-    {
-        _observ.OnRocketEnter -= RocketJump;
-    }
+    //private void OnDisable()
+    //{
+    //    _observ.OnRocketEnter -= RocketJump;
+    //}
     public void RocketJump()
     {
         Debug.Log(_groundPosition.y);

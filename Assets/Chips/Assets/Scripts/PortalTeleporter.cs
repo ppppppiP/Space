@@ -17,13 +17,13 @@ public class PortalTeleporter: MonoBehaviour
 
     private void OnEnable()
     {
-        _observ.OnPortalEnter += Teleport;
+        SpecialEquipmentObserver.OnPortalEnter += Teleport;
     }
 
-    private void OnDisable()
-    {
-        _observ.OnPortalEnter -= Teleport;
-    }
+    //private void OnDisable()
+    //{
+    //    _observ.OnPortalEnter -= Teleport;
+    //}
 
     private void Teleport(Transform player)
     {
