@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387f41dc9595fee45a1532e4eff4ca4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleTipe: 1
-  _damage: 1
+  obstacleTipe: 3
+  _damage: 100
 --- !u!114 &-6476302394483063974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7012890546097625086}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa2ed7a0bb0a85149aab2f5a4fc8e6b5, type: 3}
   m_Name: 

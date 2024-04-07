@@ -141,12 +141,12 @@ namespace Assets.Chips.Assets.Scripts
                 _isEnter = true;
                 _isActive = false;
                 _inventory = inventory;
-                
 
                 if(equip is Portal)
                 {
                     PortalTeleporter.Instance.Teleport(other.transform);
-                }else
+                }
+                else
                 if(equip is Turbine)
                 {
                     Rocket.Instance.RocketJump();
