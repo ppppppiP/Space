@@ -151,6 +151,10 @@ namespace Assets.Chips.Assets.Scripts
                 {
                     Rocket.Instance.RocketJump();
                 }
+                if(equip is Magnit)
+                {
+                    MagnitEquipment.Instance.IsActive = true;
+                }
             }
 
         }

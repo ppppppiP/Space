@@ -120,4 +120,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _jumpPower: 25
   _duration: 0.5
+  col: {fileID: 1786047521142091143}
   _easy: 0

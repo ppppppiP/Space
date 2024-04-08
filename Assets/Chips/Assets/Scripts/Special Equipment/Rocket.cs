@@ -9,6 +9,7 @@ public class Rocket: MonoBehaviour
     [SerializeField] Transform _playerTransform;
     Vector3 _groundPosition;
     [SerializeField] Transform _height;
+    [SerializeField] GameObject RocketObject;
     [SerializeField] float _duration;
     [SerializeField] float _timer;
     Tween _tween;
@@ -37,7 +38,7 @@ public class Rocket: MonoBehaviour
     {
         Debug.Log(_groundPosition.y);
         _tween = _playerTransform.DOMoveY(_height.position.y, _duration);
-        
+        RocketObject.SetActive(true);
         StartCoroutine(RocketJumpDuration());
     }
 
@@ -45,6 +46,7 @@ public class Rocket: MonoBehaviour
     {
         yield return new WaitForSeconds(_timer);
         Debug.Log(_groundPosition.y);
-        _tween2 = _playerTransform.DOMoveY(_groundPosition.y, _duration);
+        _tween2 = _playerTransform.DOMoveY(_groundPosition.y, _duration).OnComplete(() => RocketObject.SetActive(false));
+        
     }
 }

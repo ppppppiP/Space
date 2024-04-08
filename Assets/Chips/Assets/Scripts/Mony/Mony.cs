@@ -14,6 +14,10 @@ public class Mony : MonoBehaviour
     [SerializeField] float _jumpPower;
     
     [SerializeField] float _duration;
+
+    
+    public SphereCollider col;
+    
     
     [SerializeField] Ease _easy;
 
@@ -27,12 +31,14 @@ public class Mony : MonoBehaviour
 
     private void Start()
     {
+        col = GetComponent< SphereCollider>();
         pos.y = gameObject.transform.position.y;
     }
     private void OnEnable()
     {
         a += AddVideocard;
         gameObject.transform.up = pos;
+        col.radius *= MagnitEquipment.Instance.MiltiplyColiderScale(MagnitEquipment.Instance.multiplier); 
     }
 
     //private void Update()
