@@ -31,6 +31,6 @@ public class MenuButtonsManager : MonoBehaviour
     }
 
     public void LoadGame() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

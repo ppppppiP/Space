@@ -878,7 +878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 50
   _speedUp: 2
-  _maxSpeed: 120
+  _maxSpeed: 140
 --- !u!4 &217457122
 Transform:
   m_ObjectHideFlags: 0
@@ -1807,10 +1807,10 @@ MonoBehaviour:
   Tires: 1
   Wings: 1
   BoolBar: 1
-  Magnit: 0
-  Train: 0
-  Portal: 0
-  Turbibe: 0
+  Magnit: 1
+  Train: 1
+  Portal: 1
+  Turbibe: 1
   _time: 10
 --- !u!114 &563422220
 MonoBehaviour:
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee38c953f189767479c12c4395ad839c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 30
+  _speed: 35
   _maxSpeed: 80
   _speedUp: 0.75
 --- !u!114 &563422223
@@ -3347,13 +3347,12 @@ MonoBehaviour:
   _roads:
   - {fileID: 2494941275624293312, guid: 73ccdb8ca4d34f849a863e253d147a26, type: 3}
   - {fileID: 2494941275624293312, guid: be3d361e7d196ef47895aafe418ef844, type: 3}
-  - {fileID: 2494941275624293312, guid: be3d361e7d196ef47895aafe418ef844, type: 3}
+  - {fileID: 2494941275624293312, guid: 73ccdb8ca4d34f849a863e253d147a26, type: 3}
   - {fileID: 2494941275624293312, guid: 4cc8575707d6b07448ec5b325e8f2b61, type: 3}
   - {fileID: 2494941275624293312, guid: 73ccdb8ca4d34f849a863e253d147a26, type: 3}
   - {fileID: 2494941275624293312, guid: be3d361e7d196ef47895aafe418ef844, type: 3}
-  - {fileID: 2494941275624293312, guid: 73ccdb8ca4d34f849a863e253d147a26, type: 3}
-  - {fileID: 2494941275624293312, guid: 73ccdb8ca4d34f849a863e253d147a26, type: 3}
   - {fileID: 2494941275624293312, guid: be3d361e7d196ef47895aafe418ef844, type: 3}
+  - {fileID: 2494941275624293312, guid: 73ccdb8ca4d34f849a863e253d147a26, type: 3}
   _roadLenth: 1
   _road: {fileID: 2494941275624293312, guid: 73ccdb8ca4d34f849a863e253d147a26, type: 3}
 --- !u!4 &1305749274
