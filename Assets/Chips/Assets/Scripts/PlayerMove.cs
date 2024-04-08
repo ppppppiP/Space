@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] float _maxSpeed;
     [SerializeField] float _speedUp;
+    [SerializeField] Animator anim;
     
     float _horizontal;
 
@@ -23,7 +24,7 @@ public class PlayerMove : MonoBehaviour
     {
         
         Vector3 direction = Vector3.right * SimpleInput.GetAxis("Horizontal");
-
+        anim.SetFloat("Blend", SimpleInput.GetAxis("Horizontal"));
         if(direction != Vector3.zero)
             _controller.Move(direction * _speed * Time.deltaTime);
 

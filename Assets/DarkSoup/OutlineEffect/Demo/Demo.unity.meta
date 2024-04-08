@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/DarkSoup/OutlineEffect/Demo/Demo.unity.meta
 guid: f8ae3c40c20e1a743a9554a06102569b
 timeCreated: 1490438819
 licenseType: Store
+========
+guid: 794f011566d14424a829ddb81b839ba8
+folderAsset: yes
+>>>>>>>> 5f858f35c98a1d538b4289e9b1e2e44bab469e05:Assets/Chips/Assets/Anims.meta
 DefaultImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/DarkSoup/DS Test Scene.unity
-    guid: 18284f8f1333e344ea8228f4fe636bda
+    path: Assets/Sergei/Scenes/Menu.unity
+    guid: ec72d322d1d9c0044a36881d4bad345a
   - enabled: 1
     path: Assets/Aleksey/Assets/Scenes/SceneAleksey.unity
     guid: 9385f00eabdfe6d4f91ce265cc85d71a
