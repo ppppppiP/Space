@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3985325163967612858}
   - component: {fileID: -619564204768197435}
   - component: {fileID: 8616970212858406431}
-  - component: {fileID: -1666668890233163824}
   m_Layer: 0
   m_Name: stone3
   m_TagString: Untagged
@@ -65,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7826853546659249392, guid: 2bff6d04962771244a3e1de8738f6d24, type: 3}
+  - {fileID: 2100000, guid: 6bc90f02f5bc856418cdf6e53520c7ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,7 +106,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.81
-  m_Center: {x: 0.1, y: 1, z: -0.12}
+  m_Center: {x: 0.1, y: 0, z: -0.12}
 --- !u!114 &-619564204768197435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387f41dc9595fee45a1532e4eff4ca4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleTipe: 2
-  _damage: 1
+  obstacleTipe: 3
+  _damage: 2
 --- !u!114 &8616970212858406431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,20 +136,3 @@ MonoBehaviour:
   effectPrefabe: {fileID: 720885077098000104, guid: a69d47d4d5261ff45addae724b974955,
     type: 3}
   _time: 1
---- !u!114 &-1666668890233163824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2228473864993375496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2ed7a0bb0a85149aab2f5a4fc8e6b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _jumpPower: 2
-  _jumpsNumber: 2
-  _duration: 0.5
-  _durationScale: 0
-  _easy: 0

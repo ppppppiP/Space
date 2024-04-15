@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 9107651067683478779}
   - component: {fileID: 4290439598166192717}
   - component: {fileID: 5552428893709526495}
-  - component: {fileID: 578688737874700080}
   m_Layer: 0
   m_Name: stone2
   m_TagString: Untagged
@@ -65,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7826853546659249392, guid: 2bff6d04962771244a3e1de8738f6d24, type: 3}
+  - {fileID: 2100000, guid: 6bc90f02f5bc856418cdf6e53520c7ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,12 +101,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.8
-  m_Center: {x: 0.07, y: 1, z: 0.119907856}
+  m_Center: {x: 0.07, y: 0, z: 0.119907856}
 --- !u!114 &4290439598166192717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387f41dc9595fee45a1532e4eff4ca4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleTipe: 2
-  _damage: 1
+  obstacleTipe: 3
+  _damage: 2
 --- !u!114 &5552428893709526495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,20 +136,3 @@ MonoBehaviour:
   effectPrefabe: {fileID: 720885077098000104, guid: a69d47d4d5261ff45addae724b974955,
     type: 3}
   _time: 1
---- !u!114 &578688737874700080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8106551667000010870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2ed7a0bb0a85149aab2f5a4fc8e6b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _jumpPower: 2
-  _jumpsNumber: 2
-  _duration: 0.5
-  _durationScale: 0
-  _easy: 0
