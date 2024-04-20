@@ -211,7 +211,7 @@ MonoBehaviour:
   - {fileID: 4799022567669964068}
   - {fileID: 8161940406652885533}
   - {fileID: 8543365533047865388}
-  _item: {fileID: 7295343929506774048, guid: e184012e1341de04993a5608d7b140e3, type: 3}
+  _item: {fileID: 7295343929506774048, guid: fb3f95f789eef1445bdccbb747b05b79, type: 3}
   _randomPercent: 100
 --- !u!1 &7561398843170708169
 GameObject:

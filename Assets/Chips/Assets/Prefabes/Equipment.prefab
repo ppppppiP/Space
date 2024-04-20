@@ -120,6 +120,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _equipmentType: 1
   _timer: 10
-  Tires: {fileID: 0}
-  Wings: {fileID: 0}
-  BoolBar: {fileID: 0}

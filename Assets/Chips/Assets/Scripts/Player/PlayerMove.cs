@@ -16,8 +16,9 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         _controller= GetComponent<CharacterController>();
+        Application.targetFrameRate = 70;
 
-     
+
     }
 
     private void Update()
@@ -26,7 +27,7 @@ public class PlayerMove : MonoBehaviour
 
         anim.SetFloat("Blend", SimpleInput.GetAxis("Horizontal"));
 
-        _controller.Move(Vector3.forward * RoadSpeed.Instance.Speed * Time.deltaTime);
+        //_controller.Move(Vector3.forward * RoadSpeed.Instance.Speed * Time.deltaTime);
 
         if(direction != Vector3.zero)
             _controller.Move(direction * _speed * Time.deltaTime);

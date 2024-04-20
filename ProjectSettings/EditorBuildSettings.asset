@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sergei/Scenes/Menu.unity
     guid: ec72d322d1d9c0044a36881d4bad345a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Aleksey/Assets/Scenes/SceneAleksey.unity
     guid: 9385f00eabdfe6d4f91ce265cc85d71a
+  - enabled: 1
+    path: Assets/Chips/Assets/Scenes/SampleScene.unity
+    guid: 2487119573a130441a083ed115e60f9e
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5db8c612f832f074b831e61031c05fa7,
       type: 2}
