@@ -1,10 +1,7 @@
-using DG.Tweening;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using DG.Tweening;
 using UnityEngine;
 
-public class RoadSpeed : MonoBehaviour
+public class RoadSpeed3 : MonoBehaviour
 {
     public bool CanMove = true;
     public float Speed = 100f;
@@ -12,7 +9,7 @@ public class RoadSpeed : MonoBehaviour
     [SerializeField] float _maxSpeed = 500f;
     Tween _tween;
     
-    public static RoadSpeed Instance;
+    public static RoadSpeed3 Instance;
 
     private void Awake()
     {
@@ -36,5 +33,5 @@ public class RoadSpeed : MonoBehaviour
     {
         Speed = Mathf.MoveTowards(Speed, 0, 100);
     }
-
+    
 }

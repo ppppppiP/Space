@@ -26,6 +26,7 @@ public class PlayerMove : MonoBehaviour
         Vector3 direction = Vector3.right * SimpleInput.GetAxis("Horizontal");
 
         anim.SetFloat("Blend", SimpleInput.GetAxis("Horizontal"));
+        
 
         //_controller.Move(Vector3.forward * RoadSpeed.Instance.Speed * Time.deltaTime);
 

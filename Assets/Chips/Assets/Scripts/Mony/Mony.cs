@@ -64,7 +64,7 @@ public class Mony : MonoBehaviour
         if (other.TryGetComponent<PlayerInventory>(out PlayerInventory pla))
         {_pla = pla;
             enter = true;
-            Debug.Log(MonyPrice.Instance.Price);
+          
             _tween = transform.DOMoveY(_jumpPower ,_duration).SetEase(_easy).OnComplete(a.Invoke);
   PlayerInventory.Instance.TakeMoney(MonyPrice.Instance.Price);MonyImpact.instance.ViweTakeMony(_pla._mony);
         }
