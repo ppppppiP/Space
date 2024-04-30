@@ -20,12 +20,16 @@ namespace StarWars
                 {
                     case Speeds.Speed0:
 
+
+
                         RoadSpeed.Instance.CanMove = true;
                         RoadSpeed1.Instance.CanMove = false;
                         RoadSpeed2.Instance.CanMove = false;
                         RoadSpeed3.Instance.CanMove = false;
                         break;
                     case Speeds.Speed1:
+
+
 
                         RoadSpeed.Instance.CanMove = false;
                         RoadSpeed1.Instance.CanMove = true;
@@ -34,12 +38,16 @@ namespace StarWars
                         break;
                     case Speeds.Speed2:
 
+
+
                         RoadSpeed.Instance.CanMove = false;
                         RoadSpeed1.Instance.CanMove = false;
                         RoadSpeed2.Instance.CanMove = true;
                         RoadSpeed3.Instance.CanMove = false;
                         break;
                     case Speeds.Speed3:
+
+
 
                         RoadSpeed.Instance.CanMove = false;
                         RoadSpeed1.Instance.CanMove = false;
