@@ -5,16 +5,15 @@ using Lean.Pool;
 
 public class EndlessRoad : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _roads; [SerializeField] private float _roadLenth = 40;
+    [SerializeField] private List<GameObject> _roads; 
+    
+    private float _roadLenth = 40;
+    
     public GameObject _road;
     private GameObject _roadNext;
     private Vector3 _roadPosition;
 
-    public static EndlessRoad instance { get; set; }
-    private void Awake()
-    {
-        instance = this;
-    }
+ 
     private void Start()
     {
         _roadNext = _roads[Random.Range(0, _roads.Count - 1)];
@@ -28,13 +27,11 @@ public class EndlessRoad : MonoBehaviour
 
     private void Update()
     {
-
-        _roadPosition.z = _road.transform.position.z * 4;
-
+        _roadPosition.z = _road.transform.position.z ;
 
         if (_road != null)
         {
-            if (_roadPosition.z < _road.transform.localScale.z *20)
+            if (_roadPosition.z < _road.transform.localScale.z)
             {
 
                 Spawn();
@@ -42,8 +39,6 @@ public class EndlessRoad : MonoBehaviour
             }
         }
     }
-
-
 
     public void Spawn() {
         Vector3 position;

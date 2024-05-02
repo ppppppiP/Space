@@ -21,8 +21,6 @@ public class RoadMove: MonoBehaviour
         Move();
     }
 
-   
-
     private void Move()
     {
         switch (numberOfSpeed)
@@ -56,5 +54,7 @@ public class RoadMove: MonoBehaviour
             LeanPool.Despawn(gameObject);
         }
     }
+
+   
 
 }
