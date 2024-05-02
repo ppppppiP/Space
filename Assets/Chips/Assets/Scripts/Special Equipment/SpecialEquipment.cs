@@ -15,7 +15,8 @@ namespace Assets.Chips.Assets.Scripts
         Magnit,
         Train,
         Portal,
-        Turbibe
+        Turbibe,
+        X2
     }
 
     
@@ -41,6 +42,14 @@ namespace Assets.Chips.Assets.Scripts
         }
     }
 
+    public class EquipmentX2 : IEquipment
+    {
+        public void SetEquipment(bool a, PlayerInventory pla)
+        {
+            pla.X2 = a;
+        }
+    }
+
     public class Portal : IEquipment
     {
         public void SetEquipment(bool a, PlayerInventory pla)
@@ -63,7 +72,9 @@ namespace Assets.Chips.Assets.Scripts
         [SerializeField] EquipmentType _equipmentType;
         
         [Inject] SpecialEquipmentObserver _observ;
-        
+       
+
+
         bool _isEnter;
         PlayerInventory _inventory;
         EquipmentObjects _objects;
@@ -132,6 +143,11 @@ namespace Assets.Chips.Assets.Scripts
             _isEnter = false;
         }
 
+        private void OnTriggerExit(Collider other)
+        {
+            
+        }
+
         private void OnTriggerEnter(Collider other)
         {
 
@@ -151,12 +167,17 @@ namespace Assets.Chips.Assets.Scripts
                 {
                     Rocket.Instance.RocketJump();
                 }
+                else
                 if(equip is Magnit)
                 {
                     MagnitEquipment.Instance.IsActive = true;
                 }
+                else
+                if(equip is EquipmentX2)
+                {
+                    X2.Instance.Muliply();
+                }
             }
-
         }
     }
 }

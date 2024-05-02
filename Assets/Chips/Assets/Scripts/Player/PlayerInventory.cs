@@ -10,7 +10,8 @@ public class PlayerInventory: MonoBehaviour
                 Magnit,
                 Train,
                 Portal,
-                Turbibe;
+                Turbibe,
+                X2;
     [SerializeField] float _time = 10f;
     float _timer;
     EquipmentObjects _objects;
