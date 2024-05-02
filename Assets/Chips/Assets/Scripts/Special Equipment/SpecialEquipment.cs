@@ -177,7 +177,17 @@ namespace Assets.Chips.Assets.Scripts
                 {
                     X2.Instance.Muliply();
                 }
+                else
+                if(equip is Train)
+                {
+
+                }
             }
         }
     }
+}
+
+public class SingleTrain: MonoBehaviour 
+{
+    
 }
