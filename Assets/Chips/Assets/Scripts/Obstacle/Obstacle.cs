@@ -17,7 +17,7 @@ public class Dirt : IObstacle
 
     public void SetDamage(bool canTake, PlayerHP hP, int damage)
     {
-        if (canTake)
+        if (canTake || !SingleTrain.Instance.IsTrainActive)
         {
             hP.TakeDamage(damage);
         }
@@ -30,7 +30,7 @@ public class Ravine: IObstacle
     
     public void SetDamage(bool canTake, PlayerHP hP, int damage)
     {
-        if (canTake)
+        if (canTake || !SingleTrain.Instance.IsTrainActive)
         {
             hP.TakeDamage(damage);
         }
@@ -41,7 +41,7 @@ public class ImpassableObstacle : IObstacle
     
     public void SetDamage(bool canTake, PlayerHP hP, int damage)
     {
-        if (canTake)
+        if (canTake || !SingleTrain.Instance.IsTrainActive)
         {
             hP.TakeDamage(damage);
         }
@@ -53,7 +53,7 @@ public class Rock: IObstacle
     
     public void SetDamage(bool canTake, PlayerHP hP, int damage)
     {
-        if (canTake)
+        if (canTake || !SingleTrain.Instance.IsTrainActive)
         {
             hP.TakeDamage(damage);
         }

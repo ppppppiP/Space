@@ -1060,6 +1060,7 @@ MonoBehaviour:
   Train: 0
   Portal: 0
   Turbibe: 0
+  X2: 0
   _time: 10
 --- !u!54 &349920102
 Rigidbody:
@@ -1486,6 +1487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPosition: {fileID: 349920097}
   _newPosition: {fileID: 446851235}
+  numberOfSpeed: 0
   _timer: 5
 --- !u!1 &459952104
 GameObject:
@@ -3040,7 +3042,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roads:
   - {fileID: 2494941275624293312, guid: 886cb1108b8840d4182b44f193367365, type: 3}
-  _roadLenth: 0
   _road: {fileID: 0}
 --- !u!4 &1275107393
 Transform:
@@ -3088,7 +3089,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roads:
   - {fileID: 2494941275624293312, guid: ed84f0045fa482541ae90a715a27e4b0, type: 3}
-  _roadLenth: 0
   _road: {fileID: 0}
 --- !u!4 &1305749274
 Transform:
@@ -8441,7 +8441,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roads:
   - {fileID: 2494941275624293312, guid: 655a95f2ef5caf64281493ccce0ac32b, type: 3}
-  _roadLenth: 0
   _road: {fileID: 0}
 --- !u!4 &1541518074
 Transform:
@@ -8635,7 +8634,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roads:
   - {fileID: 2494941275624293312, guid: b64c603fb9c7f094cbe0e19e3f4998d1, type: 3}
-  _roadLenth: 0
   _road: {fileID: 0}
 --- !u!4 &2005038397
 Transform:

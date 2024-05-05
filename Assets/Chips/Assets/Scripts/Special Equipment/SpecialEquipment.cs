@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -180,7 +181,7 @@ namespace Assets.Chips.Assets.Scripts
                 else
                 if(equip is Train)
                 {
-
+                    SingleTrain.Instance.SetTrainActive();
                 }
             }
         }
@@ -189,5 +190,26 @@ namespace Assets.Chips.Assets.Scripts
 
 public class SingleTrain: MonoBehaviour 
 {
-    
+    public bool IsTrainActive;
+    [SerializeField] float m_Timer;
+
+    public static SingleTrain Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void SetTrainActive()
+    {
+        IsTrainActive = true;
+        StartCoroutine(Duration());
+    }
+
+    IEnumerator Duration()
+    {
+        yield return new WaitForSeconds(m_Timer);
+        IsTrainActive = false;
+    }
+
 }
